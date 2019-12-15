@@ -7,14 +7,13 @@ declare interface RouteInfo {
   class: string;
 }
 export const ROUTES: RouteInfo[] = [
-  { path: '/containers', title: 'Containers',  icon: 'ni-ungroup text-primary', class: '' },
-  { path: '/sandboxes', title: 'Sandboxes',  icon: 'ni-box-2 text-orange', class: '' },
-  { path: '/logs', title: 'Logs',  icon: 'ni-laptop text-yellow', class: '' },
-  { path: '/api-docs', title: 'API Docs',  icon: 'ni-settings-gear-65 text-pink', class: '' },
-  { path: '/api-tokens', title: 'API Tokens',  icon: 'ni-settings-gear-65 text-pink', class: '' },
-  { path: '/images', title: 'Images',  icon: 'ni-image text-info', class: '' },
-  { path: '/volumes', title: 'Volumes',  icon: 'ni-app text-red', class: '' },
-  { path: '/metric-dashboard', title: 'Metric Dashboard',  icon: 'ni-sound-wave text-green', class: '' }
+  { path: '/containers', title: 'Containers',  icon: 'ni-ungroup', class: '' },
+  { path: '/sandboxes', title: 'Sandboxes',  icon: 'ni-box-2', class: '' },
+  { path: '/images', title: 'Images',  icon: 'ni-image', class: '' },
+  { path: '/volumes', title: 'Volumes',  icon: 'ni-app', class: '' },
+  { path: '/metric-dashboard', title: 'Metric Dashboard',  icon: 'ni-sound-wave', class: '' },
+  { path: '/users', title: 'Users',  icon: 'ni-single-02', class: '' }
+
 
 ];
 @Component({

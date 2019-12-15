@@ -1,1 +1,209 @@
-<p>images works!</p>
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row">
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Containers</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-ungroup"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Sandboxes</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-box-2"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Images</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-image"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Volumes</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-app"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-blue mb-0">Users</h5>
+                      <span class="h2 font-weight-bold mb-0">1</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                        <i class="ni ni-single-02"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt--5">
+    <div class="row">
+      <div class="col">
+        <div class="card shadow">
+          <div class="card-header border-0 flex-table">
+            <div class="flex-buttons-title">
+              <h3 class="mb-0 mr-5">Images</h3>
+              <i class="material-icons click-icon-stop" matTooltip="Delete"> delete </i>
+
+            </div>
+            <div class="flex-buttons">
+                <button class="btn btn-style" data-toggle="modal" data-target="#pullImage">
+                <p style="margin-top: 15px;">Pull image</p>
+              </button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th><mat-checkbox>check all</mat-checkbox></th>
+                  <th scope="col">Id</th>
+                  <th scope="col">Tags</th>
+                  <th scope="col">Size</th>
+                  <th scope="col">Created</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><mat-checkbox></mat-checkbox></td>
+
+                  <th scope="row">
+                    <div class="media align-items-center">
+                      <div class="media-body">
+                        <span class="mb-0 text-sm">Image</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td>
+                    <span class="mb-0 text-sm">
+                        Ubuntu:latest/Ubuntu:18.04LTS
+                    </span>
+                  </td>
+                  <td>
+                    900 Mb
+                  </td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <span class="mr-2">2019-01-26</span>
+                    </div>
+                  </td>
+                  <td>
+                      <div class="actions">
+                        <a href="javascript:void(0)">
+                            <i class="material-icons pt-3" style="color:red" matTooltip="Delete">delete </i>
+                        </a>
+                      </div>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="pullImage">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Pull Image</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form [formGroup]="imageForm">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <mat-form-field appearance="outline" class="input-full">
+                    <mat-label>Name Image</mat-label>
+                    <input formControlName="name" matInput placeholder="Name image">
+                    <mat-error *ngIf="imageForm.hasError('required', 'name')">Name of the image is <b>required</b>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6  form-group">
+                    <mat-form-field appearance="outline" class="input-full">
+                      <mat-label>Registry</mat-label>
+                      <input matInput type="text" formControlName="registry" placeholder="Leave empty to use Docker Hub" />
+                      <mat-error *ngIf="imageForm.hasError('required', 'registry')">Registry is <b>required</b>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <p>Note: if you don't specify the tag the default latest will be used</p>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" [disabled]="!imageForm.valid"> Pull Image</button>
+          </div>
+
+        </div>
+      </div>
+    </div>

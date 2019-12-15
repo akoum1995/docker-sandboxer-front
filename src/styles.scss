@@ -30,3 +30,9 @@ $docker-sandboxer-front-theme: mat-light-theme($docker-sandboxer-front-primary, 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.pt-100 {
+  margin-top: -16%;
+}
+::ng-deep .bg-gradient-danger {
+  background: linear-gradient(87deg, #5e72e4 0, #a9b2e8 100%) !important;
+}

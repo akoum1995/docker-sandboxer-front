@@ -1,1 +1,206 @@
-<p>volumes works!</p>
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+    <div class="container-fluid">
+      <div class="header-body">
+        <div class="row">
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Containers</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-ungroup"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Sandboxes</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-box-2"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Images</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-image"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+            <div class="card card-stats mb-4 mb-xl-0">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="card-title text-uppercase text-blue mb-0">Volumes</h5>
+                    <span class="h2 font-weight-bold mb-0">1</span>
+                  </div>
+                  <div class="col-auto">
+                    <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                      <i class="ni ni-app"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-blue mb-0">Users</h5>
+                      <span class="h2 font-weight-bold mb-0">1</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-blue-back text-white rounded-circle shadow">
+                        <i class="ni ni-single-02"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt--5">
+    <div class="row">
+      <div class="col">
+        <div class="card shadow">
+          <div class="card-header border-0 flex-table">
+            <div class="flex-buttons-title">
+              <h3 class="mb-0 mr-5">Volumes</h3>
+              <i class="material-icons click-icon-stop" matTooltip="Delete"> delete </i>
+
+            </div>
+            <div class="flex-buttons">
+                <button class="btn btn-style" data-toggle="modal" data-target="#addVolume">
+                  <i class="material-icons"> add </i>
+                <p style="margin-top: 15px;">Volume</p>
+              </button>
+            </div>
+          </div>
+          <div class="table-responsive">
+            <table class="table align-items-center table-flush">
+              <thead class="thead-light">
+                <tr>
+                  <th><mat-checkbox>check all</mat-checkbox></th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Stack</th>
+                  <th scope="col">Driver</th>
+                  <th scope="col">Mount Point</th>
+                  <th scope="col">Host</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td><mat-checkbox></mat-checkbox></td>
+
+                  <th scope="row">
+                    Container 1 volume
+                  </th>
+                  <td>
+                     -
+                    </td>
+                  <td>
+                    <span class="mb-0 text-sm">
+                      Local
+                    </span>
+                  </td>
+                  <td>
+                    /var/lib/docker/volumes/...
+                  </td>
+
+                  <td>
+                      Container 1
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="addVolume">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Add Volume</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form [formGroup]="volumeForm">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <mat-form-field appearance="outline" class="input-full">
+                    <mat-label>Name Image</mat-label>
+                    <input formControlName="name" matInput placeholder="Name image">
+                    <mat-error *ngIf="volumeForm.hasError('required', 'name')">Name of the volume is <b>required</b>
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6  form-group">
+                    <mat-form-field appearance="outline" class="input-full">
+                      <mat-label>Stack</mat-label>
+                      <input matInput type="text" formControlName="stack" placeholder="Stack" />
+                      <mat-error *ngIf="volumeForm.hasError('required', 'stack')">Stack is <b>required</b>
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-md-12 form-group">
+                      <mat-form-field appearance="outline" class="input-full">
+                        <mat-label>Mount Point</mat-label>
+                        <input formControlName="mount_point" matInput placeholder="Mount Point">
+                        <mat-error *ngIf="volumeForm.hasError('required', 'mount_point')">Mount Point of the volume is <b>required</b>
+                        </mat-error>
+                      </mat-form-field>
+                    </div>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" [disabled]="!volumeForm.valid"> Add Volume</button>
+          </div>
+
+        </div>
+      </div>
+    </div>

@@ -62,7 +62,7 @@
       <ul class="navbar-nav">
           <li *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
               <a routerLinkActive="active" [routerLink]="[menuItem.path]" class="nav-link">
-                  <i class="ni {{menuItem.icon}}"></i>
+                  <i class="ni {{menuItem.icon}} text-blue"></i>
                   {{menuItem.title}}
               </a>
           </li>
@@ -71,7 +71,7 @@
       <ul class="navbar-nav mb-md-3">
         <li class="nav-item">
           <a class="nav-link" routerLink="/auth/login">
-            <i class="ni ni-user-run"></i> Sign Out
+            <i class="ni ni-user-run text-blue"></i> Sign Out
           </a>
         </li>
       </ul>

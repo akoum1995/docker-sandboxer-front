@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-images',
@@ -6,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./images.component.scss']
 })
 export class ImagesComponent implements OnInit {
-
-  constructor() { }
+ imageForm: FormGroup;
+  constructor() {
+    this.imageForm = new FormGroup ({
+      name: new FormControl('', Validators.required),
+      registry: new FormControl('')
+    })
+  }
 
   ngOnInit() {
   }

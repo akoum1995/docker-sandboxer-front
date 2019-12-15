@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-volumes',
@@ -6,8 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./volumes.component.scss']
 })
 export class VolumesComponent implements OnInit {
-
-  constructor() { }
+  volumeForm: FormGroup;
+  constructor() {
+    this.volumeForm = new FormGroup({
+      name: new FormControl('', Validators.required),
+      stack: new FormControl('', Validators.required),
+      mount_point: new FormControl('', Validators.required),
+    });
+   }
 
   ngOnInit() {
   }
